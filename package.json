@@ -1,0 +1,26 @@
+{
+  "name": "cypress-start",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "open": "cypress open",
+    "test": "cypress run",
+    "test:browser": "cypress run --browser chrome --headed",
+    "test:mocha-reporter": "yarn test --reporter mochawesome --reporter-options reportDir=\"results\",overwrite=false,html=false,json=true",
+    "merge-report": "mochawesome-merge \"results/*.json\" > index.json",
+    "build-report": "marge index.json",
+    "open-report": "yarn merge-report && yarn build-report && serve mochawesome-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "13.3.0",
+    "marge": "1.0.1",
+    "mochawesome": "7.1.3",
+    "mochawesome-merge": "4.3.0",
+    "mochawesome-report-generator": "6.2.0",
+    "serve": "14.2.1"
+  }
+}

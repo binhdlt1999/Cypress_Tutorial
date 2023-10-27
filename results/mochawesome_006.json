@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-10-27T09:27:51.144Z",
+    "end": "2023-10-27T09:27:56.614Z",
+    "duration": 5470,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a7230252-8102-4b11-9896-7e773217630d",
+      "title": "",
+      "fullFile": "cypress\\tests\\signup\\SignUpTest.js",
+      "file": "cypress\\tests\\signup\\SignUpTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bb930a05-25fa-4d98-b039-a0208264901a",
+          "title": "Signup Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should be able to sign up with correct cred",
+              "fullTitle": "Signup Test should be able to sign up with correct cred",
+              "timedOut": null,
+              "duration": 3730,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const {\n  username,\n  password\n} = SIGN_UP_CRED;\nsignup(username, password);\ncy.on('window:alert', message => {\n  expect(message).to.contains('Sign up successful');\n});",
+              "err": {},
+              "uuid": "cdf343fb-fe52-4e2d-82f9-f4c38379fd80",
+              "parentUUID": "bb930a05-25fa-4d98-b039-a0208264901a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should be able to see existing username",
+              "fullTitle": "Signup Test should be able to see existing username",
+              "timedOut": null,
+              "duration": 1592,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const {\n  password\n} = SIGN_UP_CRED;\nsignup('binh', password);\ncy.on('window:alert', message => {\n  expect(message).to.contains('This user already exist');\n});",
+              "err": {},
+              "uuid": "d81cae28-3a1f-4059-884c-aad3b54698c5",
+              "parentUUID": "bb930a05-25fa-4d98-b039-a0208264901a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cdf343fb-fe52-4e2d-82f9-f4c38379fd80",
+            "d81cae28-3a1f-4059-884c-aad3b54698c5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5322,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
