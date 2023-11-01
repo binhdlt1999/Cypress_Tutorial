@@ -8,7 +8,7 @@
     "test": "cypress run",
     "test:browser": "cypress run --browser chrome --headed",
     "test:mocha-reporter": "yarn test --reporter mochawesome --reporter-options reportDir=\"results\",overwrite=false,html=false,json=true",
-    "merge-report": "mochawesome-merge \"results/*.json\" > index.json",
+    "merge-report": "mochawesome-merge \"results\\*.json\" > index.json",
     "build-report": "marge index.json",
     "open-report": "yarn merge-report && yarn build-report && serve mochawesome-report"
   },
