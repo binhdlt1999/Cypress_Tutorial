@@ -22,5 +22,6 @@
     "mochawesome-merge": "4.3.0",
     "mochawesome-report-generator": "6.2.0",
     "serve": "14.2.1"
-  }
+  },
+  "dependencies": {}
 }
